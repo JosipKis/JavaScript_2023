@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS fundamentals</title>
+    <script>
+        let var1 = "ovo je neki string";
+        document.write(var1 +" type of var is: "+ typeof (var1));
+        var1 = true;
+        document.write("<br/>");
+        document.write(var1 +" type of var is: "+ typeof (var1));
+        let var2;
+        document.write("<br/>");
+        document.write(var2 +" type of var is: "+ typeof (var2));
+        var2 = 130.5;
+        document.write("<br/>");
+        document.write(var2 +" type of var is: "+ typeof (var2));
+        let var3 = "neka vrijednost prije bloka";
+        document.write("<br/>");
+        document.write("before the block var3: "+ var3);
+        document.write("<br/> ---------------------------------------")
+        {
+            let var4 = 200;
+            var3 = 455;
+            document.write("<br/>");
+            document.write("in the block var3: "+ var3 +" | var4: "+ var4);
+        }
+        document.write("<br/>");
+        document.write("out of the block var3: "+ var3);
+
+        let str1 = 100;
+        let str2 = 235;
+        // this is a single line comment
+        /*
+        multiline
+        comment
+         */
+        let result = str2 % str1;
+        document.write("<br/>");
+        document.write("Result: "+ result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
