@@ -17,11 +17,20 @@ function process_form_data() {
     let mailText = "<br/> Mail is: "+ mail.value;
     let experienceText = "<br/> Experience is: "+ experience.value;
     let chBXJSONTEXT = "<br/> Programming: "+ JSON.stringify(chBXs);
+    let regionVal = getCheckedRadioRegion(region);
+    let regionText = "<br/> Region: "+ regionVal;
 
     document.getElementById("data_view").style.fontsize = "15px";
     document.getElementById("data_view").style.fontFamily = "Bell MT, sans-serif";
     document.getElementById("data_view").style.color = "#a009b8";
-    document.getElementById("data_view").innerHTML = nameText + mailText + experienceText + chBXJSONTEXT;
+    document.getElementById("data_view").innerHTML = nameText + mailText + experienceText + chBXJSONTEXT + regionText;
+
+    localStorage.setItem("nameItem", name.value);
+    localStorage.setItem("mailItem", mail.value);
+    localStorage.setItem("experienceItem", experience.value);
+    localStorage.setItem("regionItem", regionVal);
+    localStorage.setItem("programmingItems", JSON.stringify(chBXs));
+    document.location = "show_data.html";
 }
 
 function checkBoxVals(cbv){
